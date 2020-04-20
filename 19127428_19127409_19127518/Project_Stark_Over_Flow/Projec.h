@@ -31,3 +31,15 @@ struct student
 	string class_stu;
 };
 
+struct member
+{
+	struct student *stdnt;
+	struct staff *stf;
+	struct lecture *lec;
+};
+
+struct loginresult
+{
+	int type; // 1 = staff , 2 = lecture, 3 = student
+	int location; //location at which array hold the information of that logged in user
+};

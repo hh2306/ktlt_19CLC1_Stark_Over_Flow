@@ -147,11 +147,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LogIn.cpp" />
     <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
     <ClCompile Include="Readmember.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="LogIn.h" />
     <ClInclude Include="Projec.h" />
     <ClInclude Include="Readmember.h" />
   </ItemGroup>
