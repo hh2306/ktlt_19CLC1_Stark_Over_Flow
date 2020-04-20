@@ -18,5 +18,13 @@
     <ClCompile Include="Project_Stark_Over_Flow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Projec.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Projec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
