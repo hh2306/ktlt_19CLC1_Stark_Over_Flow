@@ -29,3 +29,10 @@ struct DoB
 	int month;
 	int day;
 };
+
+struct member
+{
+	struct staff;
+	struct lecture;
+	struct student;
+};
