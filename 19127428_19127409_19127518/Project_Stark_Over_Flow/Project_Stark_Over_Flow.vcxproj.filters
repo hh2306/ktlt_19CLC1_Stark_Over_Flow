@@ -21,9 +21,15 @@
     <ClCompile Include="Projec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Readmember.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Projec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Readmember.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

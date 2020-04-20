@@ -149,9 +149,11 @@
   <ItemGroup>
     <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
+    <ClCompile Include="Readmember.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Projec.h" />
+    <ClInclude Include="Readmember.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
