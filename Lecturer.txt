@@ -1,18 +1,19 @@
 3
 
-dbtien
+dr.dbtien
 abcdef
 Dinh Ba Tien
 Tien si
 Male
 
-nmhuy 
+m.nmhuy 
 abcdef
 Nguyen Minh Huy 
 Thac si
 Male
 
-nhminh
+m.nhminh
 abcdef
-Nguyen Hai Minh 
+m.Nguyen Hai Minh
+Thac si
 Female
