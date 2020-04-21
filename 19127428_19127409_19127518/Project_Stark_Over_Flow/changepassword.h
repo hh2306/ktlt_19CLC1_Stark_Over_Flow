@@ -2,6 +2,5 @@
 #include <iostream>
 #include "Projec.h"
 using namespace std;
-void chpass(member& user, string password, loginresult F); //F has the location of that array which holds the infomation about the user by the login function
-
+bool chpass(member& user, string password, loginresult F); //F has the location of that array which holds the infomation about the user by the login function
 
