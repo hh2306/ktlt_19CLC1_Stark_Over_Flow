@@ -147,12 +147,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="changepassword.cpp" />
+<<<<<<< HEAD
+    <ClCompile Include="chpassintxt.cpp" />
+=======
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
     <ClCompile Include="LogIn.cpp" />
     <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
     <ClCompile Include="Readmember.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="changepassword.h" />
+<<<<<<< HEAD
+    <ClInclude Include="chpassintxt.h" />
+=======
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
     <ClInclude Include="LogIn.h" />
     <ClInclude Include="Projec.h" />
     <ClInclude Include="Readmember.h" />

@@ -27,6 +27,16 @@
     <ClCompile Include="LogIn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="changepassword.cpp">
+<<<<<<< HEAD
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chpassintxt.cpp">
+      <Filter>Source Files</Filter>
+=======
+      <Filter>Header Files</Filter>
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Projec.h">
@@ -38,5 +48,14 @@
     <ClInclude Include="LogIn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="changepassword.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="chpassintxt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+=======
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
   </ItemGroup>
 </Project>
