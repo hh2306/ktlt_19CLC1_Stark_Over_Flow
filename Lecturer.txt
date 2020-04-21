@@ -7,12 +7,13 @@ Tien si
 Male
 
 m.nmhuy 
+abcdef
 Nguyen Minh Huy 
 Thac si
 Male
 
 m.nhminh
 abcdef
-Nguyen Hai Minh
+m.Nguyen Hai Minh
 Thac si
 Female

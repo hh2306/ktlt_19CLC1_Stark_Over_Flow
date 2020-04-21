@@ -2,7 +2,7 @@
 void Read_staff(staff*& a, int& N_staff)
 {
 	ifstream f;
-	f.open("Staff.txt",ios::in);
+	f.open("D:\\Staff.txt");
 	if (f.fail())
 	{
 		cout << " Error open file " << endl;
@@ -19,12 +19,11 @@ void Read_staff(staff*& a, int& N_staff)
 		f >> a[i].sex;
 	}
 	f.close();
-	
 }
 void Read_student(student*& a, int& N_student)
 {
 	ifstream f;
-	f.open("Student.txt",ios::in);
+	f.open("D:\\Student.txt");
 	if (f.fail())
 	{
 		cout << " Error open file " << endl;
@@ -47,8 +46,9 @@ void Read_student(student*& a, int& N_student)
 }
 void Read_lecture(lecture*& a, int& N_lecture)
 {
+	{
 		ifstream f;
-		f.open("Lecturer.txt",ios::in);
+		f.open("D:\\Lecturer.txt");
 		if (f.fail())
 		{
 			cout << " Error open file " << endl;
@@ -62,9 +62,10 @@ void Read_lecture(lecture*& a, int& N_lecture)
 			f >> a[i].password;
 			f.ignore();
 			getline(f, a[i].name);
+			f.ignore();
 			getline(f, a[i].academic_rank);
 			f >> a[i].sex;
 		}
 		f.close();
-		
+	}
 }
