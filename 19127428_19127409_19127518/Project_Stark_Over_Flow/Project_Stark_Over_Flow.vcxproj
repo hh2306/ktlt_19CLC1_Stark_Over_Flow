@@ -149,7 +149,10 @@
   <ItemGroup>
     <ClCompile Include="changepassword.cpp" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClCompile Include="chpassintxt.cpp" />
+=======
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
 =======
 >>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
     <ClCompile Include="LogIn.cpp" />
@@ -160,7 +163,10 @@
   <ItemGroup>
     <ClInclude Include="changepassword.h" />
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="chpassintxt.h" />
+=======
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
 =======
 >>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
     <ClInclude Include="LogIn.h" />

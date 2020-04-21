@@ -29,10 +29,14 @@
     </ClCompile>
     <ClCompile Include="changepassword.cpp">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="chpassintxt.cpp">
       <Filter>Source Files</Filter>
+=======
+      <Filter>Header Files</Filter>
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
 =======
       <Filter>Header Files</Filter>
 >>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
@@ -52,9 +56,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <ClInclude Include="chpassintxt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
 =======
 >>>>>>> 347267266f849be3c597e8dd0de1f9f4d9ef0854
   </ItemGroup>
