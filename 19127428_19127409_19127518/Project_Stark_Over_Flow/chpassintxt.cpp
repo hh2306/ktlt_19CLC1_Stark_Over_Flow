@@ -35,7 +35,6 @@ void chpassintxt(member user, loginresult type,int x,int y ,int z)
 		}
 		else
 		{
-			cout << "Error renaming file\n";
 			return;
 		}
 
