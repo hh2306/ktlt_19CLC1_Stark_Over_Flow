@@ -46,7 +46,7 @@ loginresult login(std::string username, std::string password, member type, int x
 			{
 				if (password == type.stf[i].password)
 				{
-					result.type = 2;		// 1 = staffs
+					result.type = 1;		// 1 = staffs
 					result.location = i;
 					return result;
 				}

@@ -50,3 +50,24 @@ void chpass(member& user, string password, loginresult F) //F has the location o
 		}
 	}
 }
+void ViewProfileInfo(member& user, loginresult F)
+{
+	cout << endl;
+	if (F.type==1)      // For staff
+	{
+		cout << user.stf[F.location].name << endl;
+		cout << user.stf[F.location].sex << endl;
+	} if (F.type==2)      // For Lecturer
+	{
+		cout << user.lec[F.location].name << endl;
+		cin.ignore();
+		cout << user.lec[F.location].academic_rank << endl;
+		cout << user.lec[F.location].sex << endl;
+	}
+	 if( F.type==3)         // For student
+	{
+		cout << user.stdnt[F.location].name << endl;
+		cout << user.stdnt[F.location].class_stu << endl;
+		cout << user.stdnt[F.location].dob.day<<" "<< user.stdnt[F.location].dob.month<<" "<<user.stdnt[F.location].dob.year << endl<<endl;
+	}
+}
