@@ -21,6 +21,14 @@
     <ClCompile Include="Projec.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="Show_menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="All_roles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+=======
     <ClCompile Include="Readmember.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -42,11 +50,31 @@
     <ClCompile Include="ViewMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Projec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="Show_menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Part_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="All_roles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project_Stark_Over_Flow.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+=======
     <ClInclude Include="Readmember.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -59,6 +87,7 @@
     <ClInclude Include="changepassword.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="chpassintxt.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -68,5 +97,8 @@
     <ClInclude Include="ViewMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+=======
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
+>>>>>>> 14116f499ac163622406d21906280f9fe46a1936
   </ItemGroup>
 </Project>
