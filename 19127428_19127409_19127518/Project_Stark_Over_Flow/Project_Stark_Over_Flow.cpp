@@ -1,15 +1,11 @@
 #include <iostream>
-#include "Projec.h"
+#include "All_roles.h"
 using namespace std;
-
+int a;
 
 int main()
 {
-    cout << " Project ez " << endl;
-    staff* a;
-    int N_staff;
-    Read_staff(a, N_staff);
-    delete[]a;
+    all_first_function();
     return 0;
 }
 

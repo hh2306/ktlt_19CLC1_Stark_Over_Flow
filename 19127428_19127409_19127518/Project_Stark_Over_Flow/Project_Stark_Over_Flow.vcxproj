@@ -147,11 +147,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="All_roles.cpp" />
     <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
+    <ClCompile Include="Show_menu.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="All_roles.h" />
+    <ClInclude Include="Part_1.h" />
     <ClInclude Include="Projec.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Show_menu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project_Stark_Over_Flow.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

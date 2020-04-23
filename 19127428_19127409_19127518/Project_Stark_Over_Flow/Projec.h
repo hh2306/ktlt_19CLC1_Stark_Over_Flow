@@ -30,7 +30,17 @@ struct student
 	DoB dob;
 	string class_stu;
 };
-
-void Read_staff(staff*& a, int& N_staff);
-void Read_student(student*& a, int& N_student);
-void Read_lecture(lecture*& a, int& N_lecture);
+struct member
+{
+	struct student* stdnt;
+	struct staff* stf;
+	struct lecture* lec;
+	int N_student;
+	int N_staff;
+	int N_lecture;
+};
+struct loginresult
+{
+	int type; // 1 = staff , 2 = lecture, 3 = student
+	int location; //location at which array hold the information of that logged in user
+};
