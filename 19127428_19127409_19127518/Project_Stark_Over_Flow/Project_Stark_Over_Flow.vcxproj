@@ -147,6 +147,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="All_roles.cpp" />
     <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
@@ -161,6 +162,19 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Project_Stark_Over_Flow.rc" />
+=======
+    <ClCompile Include="changepassword.cpp" />
+    <ClCompile Include="LogIn.cpp" />
+    <ClCompile Include="Projec.cpp" />
+    <ClCompile Include="Project_Stark_Over_Flow.cpp" />
+    <ClCompile Include="Readmember.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="changepassword.h" />
+    <ClInclude Include="LogIn.h" />
+    <ClInclude Include="Projec.h" />
+    <ClInclude Include="Readmember.h" />
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

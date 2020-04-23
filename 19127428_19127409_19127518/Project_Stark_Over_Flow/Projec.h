@@ -30,6 +30,7 @@ struct student
 	DoB dob;
 	string class_stu;
 };
+<<<<<<< HEAD
 struct member
 {
 	struct student* stdnt;
@@ -39,6 +40,16 @@ struct member
 	int N_staff;
 	int N_lecture;
 };
+=======
+
+struct member
+{
+	struct student *stdnt;
+	struct staff *stf;
+	struct lecture *lec;
+};
+
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
 struct loginresult
 {
 	int type; // 1 = staff , 2 = lecture, 3 = student
