@@ -147,45 +147,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClCompile Include="All_roles.cpp" />
-    <ClCompile Include="Projec.cpp" />
-    <ClCompile Include="Project_Stark_Over_Flow.cpp" />
-    <ClCompile Include="Show_menu.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="All_roles.h" />
-    <ClInclude Include="Part_1.h" />
-    <ClInclude Include="Projec.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="Show_menu.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Project_Stark_Over_Flow.rc" />
-=======
     <ClCompile Include="changepassword.cpp" />
     <ClCompile Include="chpassintxt.cpp" />
     <ClCompile Include="LogIn.cpp" />
     <ClCompile Include="LogOut.cpp" />
-    <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
     <ClCompile Include="Readmember.cpp" />
-    <ClCompile Include="ViewMenu.cpp" />
+    <ClCompile Include="Show_menu.cpp" />
     <ClCompile Include="ViewProfileInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="All_roles.h" />
     <ClInclude Include="changepassword.h" />
     <ClInclude Include="chpassintxt.h" />
     <ClInclude Include="LogIn.h" />
     <ClInclude Include="LogOut.h" />
     <ClInclude Include="Projec.h" />
     <ClInclude Include="Readmember.h" />
-<<<<<<< HEAD
-    <ClInclude Include="ViewMenu.h" />
+    <ClInclude Include="Show_menu.h" />
     <ClInclude Include="ViewProfileInfo.h" />
-=======
->>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
->>>>>>> 14116f499ac163622406d21906280f9fe46a1936
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
