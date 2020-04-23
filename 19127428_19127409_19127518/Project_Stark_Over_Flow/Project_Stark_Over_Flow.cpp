@@ -1,19 +1,12 @@
 #include <iostream>
-<<<<<<< HEAD
-#include "All_roles.h"
-=======
 #include "Projec.h"
 #include "LogIn.h"
 #include "Readmember.h"
->>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
 using namespace std;
-int a;
+
 
 int main()
 {
-<<<<<<< HEAD
-    all_first_function();
-=======
     cout << "Login                 ( Press 1 )" << endl;
     cout << "Show Menu             ( Press 2 )" << endl;
     cout << "View Profile Info     ( Press 3 )" << endl;
@@ -29,7 +22,6 @@ int main()
     F = login(username, pass, a, n_lec, n_staff, n_stdnt);
     cout << F.location << " " << F.type;
     ViewProfileInfo(a, F);
->>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
     return 0;
 
 }
