@@ -148,16 +148,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="changepassword.cpp" />
+    <ClCompile Include="chpassintxt.cpp" />
     <ClCompile Include="LogIn.cpp" />
+    <ClCompile Include="LogOut.cpp" />
     <ClCompile Include="Projec.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
     <ClCompile Include="Readmember.cpp" />
+    <ClCompile Include="ViewMenu.cpp" />
+    <ClCompile Include="ViewProfileInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="changepassword.h" />
+    <ClInclude Include="chpassintxt.h" />
     <ClInclude Include="LogIn.h" />
+    <ClInclude Include="LogOut.h" />
     <ClInclude Include="Projec.h" />
     <ClInclude Include="Readmember.h" />
+    <ClInclude Include="ViewMenu.h" />
+    <ClInclude Include="ViewProfileInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

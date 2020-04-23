@@ -27,8 +27,20 @@
     <ClCompile Include="LogIn.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ViewProfileInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="changepassword.cpp">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="chpassintxt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LogOut.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ViewMenu.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -41,7 +53,19 @@
     <ClInclude Include="LogIn.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ViewProfileInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="changepassword.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="chpassintxt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LogOut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
