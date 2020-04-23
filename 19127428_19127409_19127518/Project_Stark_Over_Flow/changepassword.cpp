@@ -1,8 +1,9 @@
 #include "changepassword.h"
-bool chpass(member& user, string password, loginresult F) //F has the location of that array which holds the infomation about the user by the login function
+bool chpass(member& user, loginresult F) //F has the location of that array which holds the infomation about the user by the login function
 {
 loop:
 	{
+		string password;
 		cout << "Enter your old password: ";
 		cin >> password;
 		string passwordcheck;

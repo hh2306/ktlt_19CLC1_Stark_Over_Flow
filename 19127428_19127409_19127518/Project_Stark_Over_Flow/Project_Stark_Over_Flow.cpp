@@ -1,27 +1,10 @@
 #include <iostream>
-#include "Projec.h"
-#include "LogIn.h"
-#include "Readmember.h"
+#include "All_roles.h"
 using namespace std;
-
 
 int main()
 {
-    cout << "Login                 ( Press 1 )" << endl;
-    cout << "Show Menu             ( Press 2 )" << endl;
-    cout << "View Profile Info     ( Press 3 )" << endl;
-    cout << "Change Password       ( Press 4 )" << endl;
-    cout << "Logout                ( Press 5 )" << endl;
-    string username, pass;
-    member a;
-    loginresult F;
-    int n_lec,  n_staff,  n_stdnt;
-    Read_lecture(a.lec, n_lec);
-    Read_staff(a.stf, n_staff);
-    Read_student(a.stdnt, n_stdnt);
-    F = login(username, pass, a, n_lec, n_staff, n_stdnt);
-    cout << F.location << " " << F.type;
-    ViewProfileInfo(a, F);
+    all_first_function();
     return 0;
 
 }

@@ -1,15 +1,19 @@
 #include "LogIn.h"
-loginresult login(std::string username, std::string password, member type, int x, int y, int z) // x = numbers of staffs, y = numbers of lectures, z= numbers of students
+loginresult login(member type) 
 {
+	string username;
+	string password;
 	cout << "\t\t****LOG IN MENU*****" << endl;
-	cout << "Enter username: ";
+	cout << " Enter username: ";
 	cin >> username;
-	cout << "Enter password: ";
+	cout << " Enter password: ";
 	cin >> password;
 	loginresult result;
+	result.type = 0;
+	result.location = 0;
 	if (username[0] >= '0' && username[0] <= '9')
 	{
-		for (int i = 0; i < z; ++i)
+		for (int i = 0; i < type.N_student; ++i)
 		{
 			if (username == type.stdnt[i].user)
 			{				 
@@ -20,12 +24,12 @@ loginresult login(std::string username, std::string password, member type, int x
 					return result;
 				}
 			}
+			
 		}
 	}
-	string temp = username.substr(0, 3);
 	if (username[1] == '.' || username[2] == '.')
 	{
-		for (int i = 0; i < y; ++i)
+		for (int i = 0; i < type.N_lecture; ++i)
 		{
 			if (username == type.lec[i].user)
 			{
@@ -40,7 +44,7 @@ loginresult login(std::string username, std::string password, member type, int x
 	}
 	else
 	{
-		for (int i = 0; i < y; ++i)
+		for (int i = 0; i < type.N_staff; ++i)
 		{
 			if (username == type.stf[i].user)
 			{
@@ -53,4 +57,5 @@ loginresult login(std::string username, std::string password, member type, int x
 			}
 		}
 	}
+	return result;
 }

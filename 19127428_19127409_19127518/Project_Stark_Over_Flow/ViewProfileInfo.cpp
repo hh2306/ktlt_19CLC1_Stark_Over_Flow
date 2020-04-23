@@ -1,5 +1,5 @@
 #include "ViewProfileInfo.h"
-void ViewProfileInfo(member& user, loginresult F)
+void ViewProfileInfo(member user, loginresult F)
 {
 	cout << endl;
 	if (F.type == 1)      // For staff

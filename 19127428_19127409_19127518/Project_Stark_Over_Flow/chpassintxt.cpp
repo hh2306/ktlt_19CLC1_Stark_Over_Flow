@@ -1,10 +1,10 @@
 #include "chpassintxt.h"
-void chpassintxt(member user, loginresult type,int x,int y ,int z)
+void chpassintxt(member user, loginresult type)
 {
 	ofstream fileW;
 	string oldname;
 	string newname;
-	string dir = "D:\\";
+	string dir = "D:\\project\\";
 	// For staff
 	if (type.type == 1)
 	{
@@ -17,9 +17,9 @@ void chpassintxt(member user, loginresult type,int x,int y ,int z)
 		}
 		else
 		{
-			fileW << x << "\n";
+			fileW << user.N_staff << "\n";
 			fileW << std::endl;
-			for (int i = 0; i < x; ++i)
+			for (int i = 0; i < user.N_staff; ++i)
 			{
 				fileW << user.stf[i].user << "\n";
 				fileW << user.stf[i].password << "\n";
@@ -51,9 +51,9 @@ void chpassintxt(member user, loginresult type,int x,int y ,int z)
 		}
 		else
 		{
-			fileW << x << "\n";
+			fileW << user.N_lecture << "\n";
 			fileW << std::endl;
-			for (int i = 0; i < y; ++i)
+			for (int i = 0; i < user.N_lecture; ++i)
 			{
 				fileW << user.lec[i].user << "\n";
 				fileW << user.lec[i].password << "\n";
@@ -85,9 +85,9 @@ void chpassintxt(member user, loginresult type,int x,int y ,int z)
 		}
 		else
 		{
-			fileW << x << "\n";
+			fileW << user.N_student << "\n";
 			fileW << std::endl;
-			for (int i = 0; i < z; ++i)
+			for (int i = 0; i < user.N_student; ++i)
 			{
 				fileW << user.stdnt[i].user << "\n";
 				fileW << user.stdnt[i].password << "\n";
