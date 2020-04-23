@@ -1,8 +1,16 @@
 #include "Readmember.h"
+<<<<<<< HEAD
+
+void Read_staff(staff*& a, int& N_staff)
+{
+	ifstream f;
+	f.open("D:\\project\\Staff.txt",ios::in);
+=======
 void Read_staff(staff*& a, int& N_staff)
 {
 	ifstream f;
 	f.open("Staff.txt",ios::in);
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
 	if (f.fail())
 	{
 		cout << " Error open file " << endl;
@@ -24,7 +32,11 @@ void Read_staff(staff*& a, int& N_staff)
 void Read_student(student*& a, int& N_student)
 {
 	ifstream f;
+<<<<<<< HEAD
+	f.open("D:\\project\\Student.txt",ios::in);
+=======
 	f.open("Student.txt",ios::in);
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
 	if (f.fail())
 	{
 		cout << " Error open file " << endl;
@@ -48,7 +60,11 @@ void Read_student(student*& a, int& N_student)
 void Read_lecture(lecture*& a, int& N_lecture)
 {
 		ifstream f;
+<<<<<<< HEAD
+		f.open("D:\\project\\Lecture.txt",ios::in);
+=======
 		f.open("Lecturer.txt",ios::in);
+>>>>>>> ac657d99f53674730eef7ce2f57f8368cc9f1db2
 		if (f.fail())
 		{
 			cout << " Error open file " << endl;
