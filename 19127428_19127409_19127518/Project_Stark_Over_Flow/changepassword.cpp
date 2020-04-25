@@ -15,13 +15,13 @@ loop:
 
 			loop1:
 				{
-					cout << "Enter your new password: ";
+					cout << " Enter your new password: ";
 					cin >> password;
-					cout << "Please confirm your new password: ";
+					cout << " Please confirm your new password: ";
 					cin >> passwordcheck;
 					if (password != passwordcheck)
 					{
-						cout << "New password confirmation is not equal!!!" << endl;
+						cout << " New password confirmation is not equal!!!" << endl;
 						goto loop1;
 					}
 					else
@@ -37,7 +37,7 @@ loop:
 			}
 			else if (password != user.stf[F.location].password)
 			{
-				cout << "Incorrect old password!!" << endl;
+				cout << " Incorrect old password!!" << endl;
 				goto loop;
 			}
 
@@ -49,13 +49,13 @@ loop:
 			{
 			loop2:
 				{
-					cout << "Enter your new password: ";
+					cout << " Enter your new password: ";
 					cin >> password;
-					cout << "Please confirm your new password: ";
+					cout << " Please confirm your new password: ";
 					cin >> passwordcheck;
 					if (password != passwordcheck)
 					{
-						cout << "New password confirmation is not equal!!!" << endl;
+						cout << " New password confirmation is not equal!!!" << endl;
 						goto loop2;
 
 					}
@@ -72,7 +72,7 @@ loop:
 			}
 			else if (password != user.lec[F.location].password)
 			{
-				cout << "Incorrect old password!!" << endl;
+				cout << " Incorrect old password!!" << endl;
 				goto loop;
 			}
 		}
@@ -83,13 +83,13 @@ loop:
 			{
 			loop3:
 				{
-					cout << "Enter your new password: ";
+					cout << " Enter your new password: ";
 					cin >> password;
-					cout << "Please confirm your new password: ";
+					cout << " Please confirm your new password: ";
 					cin >> passwordcheck;
 					if (password != passwordcheck)
 					{
-						cout << "New password confirmation is not equal!!!" << endl;
+						cout << " New password confirmation is not equal!!!" << endl;
 						goto loop3;
 
 					}
@@ -106,7 +106,7 @@ loop:
 			}
 			else if (password != user.stdnt[F.location].password)
 			{
-				cout << "Incorrect old password!!" << endl;
+				cout << " Incorrect old password!!" << endl;
 				goto loop;
 			}
 		}

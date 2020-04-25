@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -150,6 +151,7 @@
     <ClCompile Include="All_roles.cpp" />
     <ClCompile Include="changepassword.cpp" />
     <ClCompile Include="chpassintxt.cpp" />
+    <ClCompile Include="import_csv.cpp" />
     <ClCompile Include="LogIn.cpp" />
     <ClCompile Include="LogOut.cpp" />
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
@@ -161,6 +163,7 @@
     <ClInclude Include="All_roles.h" />
     <ClInclude Include="changepassword.h" />
     <ClInclude Include="chpassintxt.h" />
+    <ClInclude Include="import_csv.h" />
     <ClInclude Include="LogIn.h" />
     <ClInclude Include="LogOut.h" />
     <ClInclude Include="Projec.h" />

@@ -42,6 +42,9 @@
     <ClCompile Include="changepassword.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="import_csv.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Projec.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LogOut.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="import_csv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

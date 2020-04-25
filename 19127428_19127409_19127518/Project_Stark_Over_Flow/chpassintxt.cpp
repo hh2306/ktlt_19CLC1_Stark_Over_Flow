@@ -8,8 +8,8 @@ void chpassintxt(member user, loginresult type)
 	// For staff
 	if (type.type == 1)
 	{
-		newname = "staff-copied.txt";
-		oldname = "staff.txt";
+		newname = "Staff-copied.txt";
+		oldname = "Staff.txt";
 		fileW.open(dir+oldname);
 		if (fileW.fail())
 		{
@@ -27,10 +27,12 @@ void chpassintxt(member user, loginresult type)
 				fileW << user.stf[i].sex << "\n";
 				fileW << std::endl;
 			}
+			fileW.close();
 		}
+		
 		if (rename((dir + oldname).c_str(), (dir + newname).c_str()) == 0) //agruments take char
 		{
-			cout << "Renaming file successfully!!!\n";
+			cout << " Renaming file successfully!!!\n";
 			return;
 		}
 		else
@@ -43,7 +45,7 @@ void chpassintxt(member user, loginresult type)
 	if (type.type == 2)
 	{
 		newname = "Lecturer-copied.txt";
-		oldname = "LEcturer.txt";
+		oldname = "Lecturer.txt";
 		fileW.open(dir + oldname);
 		if (fileW.fail())
 		{
@@ -62,10 +64,11 @@ void chpassintxt(member user, loginresult type)
 				fileW << user.stf[i].sex << "\n";
 				fileW << std::endl;
 			}
+			fileW.close();
 		}
 		if (rename((dir + oldname).c_str(), (dir + newname).c_str()) == 0) //agruments take char
 		{
-			cout << "File renamed successfully\n";
+			cout << " File renamed successfully\n";
 			return;
 		}
 		else
@@ -96,10 +99,11 @@ void chpassintxt(member user, loginresult type)
 				fileW << user.stdnt[i].class_stu << "\n";
 				fileW << std::endl;
 			}
+			fileW.close();
 		}
 		if (rename((dir + oldname).c_str(), (dir + newname).c_str()) == 0) //agruments take char
 		{
-			cout << "File renamed successfully\n";
+			cout << " File renamed successfully\n";
 			return;
 		}
 		else

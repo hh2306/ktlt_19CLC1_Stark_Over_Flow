@@ -64,7 +64,10 @@ loop:
 				}
 				if (command == "password")
 				{
-					chpass(type, log_in);
+					if (chpass(type, log_in) == true)
+					{
+						cout << " Password has changed succesfully " << endl;
+					}
 					chpassintxt(type, log_in);
 					goto loop2;
 				}
