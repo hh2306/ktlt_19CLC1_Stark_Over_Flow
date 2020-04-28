@@ -15,8 +15,8 @@ void chang_stu_class(member& type)
 			cout << " Student Profile " << endl;
 			cout << " Name : " << type.stdnt[i].name << endl;
 			cout << " Class : " << type.stdnt[i].class_stu << endl;
-			cout << " Date of Birth : " << type.stdnt[i].dob.day << "/" << type.stdnt[i].dob.month << "/" << type.stdnt[i].dob.year << endl;
-			break;	// Neu da co == id roi thi break ra, khong can ton performance chay loop tiep
+			cout << " Date of Birth : " << type.stdnt[i].dob.day << "/" << type.stdnt[i].dob.month << "/" << type.stdnt[i].dob.year << endl << endl;
+			break; // just break out after finding user, no point wasting performance
 		}
 	}
 	cout << " Which class do you want to change to ";
@@ -100,13 +100,20 @@ void delete_student(string namefile, string tempname, string user)
 		for (int i = 0; i < Nstudent ; ++i)
 		{
 			fileR >> arr[i].user;
+			cout << arr[i].user << endl;
 			fileR >> arr[i].password;
+			cout << arr[i].password << endl;
 			fileR.ignore();
 			getline(fileR, arr[i].name);
+			cout << arr[i].name << endl;
 			fileR >> arr[i].dob.year;
+			cout << arr[i].dob.year << endl;
 			fileR >> arr[i].dob.month;
+			cout << arr[i].dob.month << endl;
 			fileR >> arr[i].dob.day;
+			cout << arr[i].dob.day << endl;
 			fileR >> arr[i].class_stu;
+			cout << arr[i].class_stu << endl;
 		}
 	}
 	fileR.close();
@@ -116,14 +123,14 @@ void delete_student(string namefile, string tempname, string user)
 		if (arr[i].user == user)
 		{
 			loc = i;
-			break;
+			break; // break right here after getting the correct location of that student in memory
 		}
-		// Khong phai break cho nay
+	
 	}
 
 	// Change class infomation 
 	fstream f;
-	f.open(tempname,ios::out);
+	f.open(tempname,ios::out); // should be tempname
 	if (f.fail())
 	{
 		return;
@@ -132,7 +139,7 @@ void delete_student(string namefile, string tempname, string user)
 	{
 		f << Nstudent - 1 << "\n";
 		f << std::endl;
-		for (int i = 0; i < loc; ++i)
+		for (int i = 0; i <loc; ++i)
 		{
 			f<< arr[i].user << "\n";
 			f << arr[i].password << "\n";
