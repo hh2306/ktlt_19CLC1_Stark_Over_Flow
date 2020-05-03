@@ -10,7 +10,7 @@ void chpassintxt(member user, loginresult type)
 	{
 		newname = "Staff-copied.txt";
 		oldname = "Staff.txt";
-		fileW.open(dir+oldname);
+		fileW.open(dir+newname);
 		if (fileW.fail())
 		{
 			return;
@@ -29,24 +29,14 @@ void chpassintxt(member user, loginresult type)
 			}
 			fileW.close();
 		}
-		
-		if (rename((dir + oldname).c_str(), (dir + newname).c_str()) == 0) //agruments take char
-		{
-			cout << " Renaming file successfully!!!\n";
-			return;
-		}
-		else
-		{
-			return;
-		}
-
+		fs::rename(dir + newname, dir + oldname);
 	}
 	//For Lec
 	if (type.type == 2)
 	{
-		newname = "Lecturer-copied.txt";
-		oldname = "Lecturer.txt";
-		fileW.open(dir + oldname);
+		newname = "Lecture-copied.txt";
+		oldname = "Lecture.txt";
+		fileW.open(dir + newname);
 		if (fileW.fail())
 		{
 			return;
@@ -66,22 +56,14 @@ void chpassintxt(member user, loginresult type)
 			}
 			fileW.close();
 		}
-		if (rename((dir + oldname).c_str(), (dir + newname).c_str()) == 0) //agruments take char
-		{
-			cout << " File renamed successfully\n";
-			return;
-		}
-		else
-		{
-			return;
-		}
+		fs::rename(dir + newname, dir + oldname);
 	}
 	//For Student
 	if (type.type == 3)
 	{
 		newname = "Student-copied.txt";
 		oldname = "Student.txt";
-		fileW.open(dir + oldname);
+		fileW.open(dir + newname);
 		if (fileW.fail())
 		{
 			return;
@@ -101,14 +83,6 @@ void chpassintxt(member user, loginresult type)
 			}
 			fileW.close();
 		}
-		if (rename((dir + oldname).c_str(), (dir + newname).c_str()) == 0) //agruments take char
-		{
-			cout << " File renamed successfully\n";
-			return;
-		}
-		else
-		{
-			return;
-		}
+		fs::rename(dir + newname, dir + oldname);
 	}
 }

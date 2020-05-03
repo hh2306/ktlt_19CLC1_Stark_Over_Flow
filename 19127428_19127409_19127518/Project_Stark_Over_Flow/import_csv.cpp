@@ -99,7 +99,7 @@ void open_csv(int& N_student, student*& arr)
 	file >> N_old_stu;
 	int N_new_stu = N_old_stu + N_student;
 	file.close();
-	chg_num_stu(N_new_stu);
+	chg_num_stu(N_new_stu, "D:\\project\\Student.txt", "D:\\project\\Student-copied.txt");
 }
 string IntToString(int a)
 {
@@ -107,17 +107,17 @@ string IntToString(int a)
 	temp << a;
 	return temp.str();
 }
-void chg_num_stu(int N_new_stu)
+void chg_num_stu(int N_new_stu, string name, string temp_name)
 {
 	string line;
 	ifstream file;
-	file.open("D:\\project\\Student.txt");
+	file.open(name);
 	if (file.fail())
 	{
 		cout << "Unable to open file" << endl;		
 	}
 	ofstream file1;
-	file1.open("D:\\project\\Student-copied.txt");
+	file1.open(temp_name);
 	file1 << N_new_stu << endl;
 	file.seekg(3, ios::beg);
 	while (!file.eof())
@@ -127,8 +127,5 @@ void chg_num_stu(int N_new_stu)
 	}
 	file.close();
 	file1.close();
-	string dir = "D:\\project\\";
-	string oldname = "Student.txt";
-	string newname = "Student-copied.txt";
-	fs::rename(dir + newname, dir + oldname);
+	fs::rename(temp_name, name);
 }

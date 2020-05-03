@@ -148,8 +148,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddNewStudent.cpp" />
     <ClCompile Include="All_roles.cpp" />
     <ClCompile Include="changepassword.cpp" />
+    <ClCompile Include="change_class.cpp" />
     <ClCompile Include="chpassintxt.cpp" />
     <ClCompile Include="import_csv.cpp" />
     <ClCompile Include="LogIn.cpp" />
@@ -157,11 +159,15 @@
     <ClCompile Include="Project_Stark_Over_Flow.cpp" />
     <ClCompile Include="Readmember.cpp" />
     <ClCompile Include="Show_menu.cpp" />
+    <ClCompile Include="ViewAllClasses.cpp" />
+    <ClCompile Include="ViewAllStudentOfClass.cpp" />
     <ClCompile Include="ViewProfileInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AddNewStudent.h" />
     <ClInclude Include="All_roles.h" />
     <ClInclude Include="changepassword.h" />
+    <ClInclude Include="change_class.h" />
     <ClInclude Include="chpassintxt.h" />
     <ClInclude Include="import_csv.h" />
     <ClInclude Include="LogIn.h" />
@@ -169,6 +175,8 @@
     <ClInclude Include="Projec.h" />
     <ClInclude Include="Readmember.h" />
     <ClInclude Include="Show_menu.h" />
+    <ClInclude Include="ViewAllClasses.h" />
+    <ClInclude Include="ViewAllStudentOfClass.h" />
     <ClInclude Include="ViewProfileInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -9,4 +9,4 @@
 using namespace std;
 void open_csv(int& N_student, student*& arr);
 string IntToString(int a);
-void chg_num_stu( int N_student);
+void chg_num_stu(int N_new_stu, string name, string temp_name);

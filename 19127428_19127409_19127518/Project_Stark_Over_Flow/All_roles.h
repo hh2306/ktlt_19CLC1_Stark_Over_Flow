@@ -8,6 +8,11 @@
 #include "changepassword.h"
 #include "chpassintxt.h"
 #include "LogOut.h"
+#include "import_csv.h"
+#include "AddNewStudent.h"
+#include "change_class.h"
+#include "ViewAllStudentOfClass.h"
+#include "ViewAllClasses.h"
 using namespace std;
 void all_first_function();
 

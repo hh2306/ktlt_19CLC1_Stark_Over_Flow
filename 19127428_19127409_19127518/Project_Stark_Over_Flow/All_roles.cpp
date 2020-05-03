@@ -55,6 +55,69 @@ loop:
 				if (command == "menu")
 				{
 					showmenu(log_in);
+					if (log_in.type == 1) // staff
+					{
+						int n1;
+						for (;;)
+						{
+							cout << " Enter your command : ";
+							cin >> n1;
+							switch (n1)
+							{
+							case 0:
+							{
+								goto loop2;
+								
+							}
+							case 1:
+							{
+								int N_csv_stu;
+								student* arr_csv;
+								open_csv(N_csv_stu, arr_csv);
+								delete[]arr_csv;
+								break;							
+							}
+							case 2:
+							{
+								AddNewStudent();
+								break;
+							}
+							case 3:
+							{
+								//Phuoc Edit an existing student
+								break;
+							}
+							case 4:
+							{
+								//Phuoc Remove a student
+								break;
+							}
+							case 5:
+							{
+								chang_stu_class(type);
+								break;
+							}
+							case 6:
+							{
+								ViewAllClasses();
+								break;
+							}
+							case 7:
+							{
+								string classes;
+								cout << " Which class do you want to see ";
+								cin >> classes;
+								ViewAllStudentOfClass(classes);
+								break;
+							}
+							//case 8 to 20 // Add later
+							}
+						}
+					}
+					// Case for Lecturer
+
+
+					// Case for Student
 					goto loop2;
 				}
 				if (command == "profile")
