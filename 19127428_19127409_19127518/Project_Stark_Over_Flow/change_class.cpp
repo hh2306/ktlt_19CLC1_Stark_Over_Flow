@@ -59,7 +59,7 @@ void chang_stu_class(member& type)
 void change_class_in_txt(member type , string namefile, string tempname)
 {
 	ofstream fileW;
-	fileW.open(namefile);
+	fileW.open(tempname);
 	if (fileW.fail())
 	{
 		return;
@@ -79,7 +79,7 @@ void change_class_in_txt(member type , string namefile, string tempname)
 		}
 		fileW.close();
 	}
-	rename((namefile).c_str(), (tempname).c_str());
+	fs::rename(tempname, namefile);
 }
 void delete_student(string namefile, string tempname, string user)
 {
@@ -87,7 +87,6 @@ void delete_student(string namefile, string tempname, string user)
 	int Nstudent;
 	student* arr;
 	fstream fileR;
-	int loc;
 	fileR.open(namefile, ios ::in );
 	if (fileR.fail())
 	{
@@ -118,6 +117,7 @@ void delete_student(string namefile, string tempname, string user)
 	}
 	fileR.close();
 	// Define location of student
+	int loc = Nstudent + 1;
 	for (int i = 0; i < Nstudent; ++i)
 	{
 		if (arr[i].user == user)
