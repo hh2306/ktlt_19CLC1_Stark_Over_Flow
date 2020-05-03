@@ -44,6 +44,7 @@ loop:
 			}
 		loop2:
 			{
+				cout << endl;
 				string command;
 				cout << endl;
 				cout << " Show menu funtion        Enter menu " << endl;
@@ -89,7 +90,7 @@ loop:
 							}
 							case 4:
 							{
-								//string reason;
+								string reason;
 								string dir = "D:\\project\\Student_";
 								string dirtemp = "-copied";
 								string ext = ".txt";
@@ -98,7 +99,7 @@ loop:
 								cin >> Class;
 								cin.ignore();
 								cout << "What reason do you want to this student : ";
-								//getline(cin, reason);
+								getline(cin, reason);
 								string path = dir + Class + ext;
 								string pathtemp = dir + Class + dirtemp + ext;
 								string user;
@@ -107,7 +108,7 @@ loop:
 								cin >> user;
 								delete_student("D:\\project\\Student.txt", "D:\\project\\Student-copied.txt", user);
 								delete_student(path, pathtemp, user);
-								//cout << "Reason : " << reason << endl;
+								cout << "Reason : " << reason << endl;
 								cout << "Delete Student Successfully !!!" << endl;
 								break;
 							}
