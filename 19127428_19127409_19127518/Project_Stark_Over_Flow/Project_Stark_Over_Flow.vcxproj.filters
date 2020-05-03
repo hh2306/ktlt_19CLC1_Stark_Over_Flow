@@ -57,6 +57,9 @@
     <ClCompile Include="change_class.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Academic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Projec.h">
@@ -99,6 +102,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="change_class.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Academic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
