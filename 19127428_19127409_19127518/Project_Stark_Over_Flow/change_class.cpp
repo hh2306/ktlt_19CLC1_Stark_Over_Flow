@@ -100,20 +100,20 @@ void delete_student(string namefile, string tempname, string user)
 		for (int i = 0; i < Nstudent ; ++i)
 		{
 			fileR >> arr[i].user;
-			cout << arr[i].user << endl;
+			//cout << arr[i].user << endl;
 			fileR >> arr[i].password;
-			cout << arr[i].password << endl;
+			//cout << arr[i].password << endl;
 			fileR.ignore();
 			getline(fileR, arr[i].name);
-			cout << arr[i].name << endl;
+			//cout << arr[i].name << endl;
 			fileR >> arr[i].dob.year;
-			cout << arr[i].dob.year << endl;
+			//cout << arr[i].dob.year << endl;
 			fileR >> arr[i].dob.month;
-			cout << arr[i].dob.month << endl;
+			//cout << arr[i].dob.month << endl;
 			fileR >> arr[i].dob.day;
-			cout << arr[i].dob.day << endl;
+			//cout << arr[i].dob.day << endl;
 			fileR >> arr[i].class_stu;
-			cout << arr[i].class_stu << endl;
+		//	cout << arr[i].class_stu << endl;
 		}
 	}
 	fileR.close();
@@ -125,7 +125,6 @@ void delete_student(string namefile, string tempname, string user)
 			loc = i;
 			break; // break right here after getting the correct location of that student in memory
 		}
-	
 	}
 
 	// Change class infomation 
@@ -139,7 +138,7 @@ void delete_student(string namefile, string tempname, string user)
 	{
 		f << Nstudent - 1 << "\n";
 		f << std::endl;
-		for (int i = 0; i <loc; ++i)
+		for (int i = 0; i < loc; ++i)
 		{
 			f<< arr[i].user << "\n";
 			f << arr[i].password << "\n";
