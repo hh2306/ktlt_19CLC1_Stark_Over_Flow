@@ -89,7 +89,10 @@ loop:
 							}
 							case 4:
 							{
-								//Phuoc Remove a student
+								string user;
+								cout << "Enter an ID of a student you want to remove: ";
+								cin >> user;
+								delete_student("D:\\project\\Student.txt", "D:\\project\\Student-copied.txt", user);
 								break;
 							}
 							case 5:
