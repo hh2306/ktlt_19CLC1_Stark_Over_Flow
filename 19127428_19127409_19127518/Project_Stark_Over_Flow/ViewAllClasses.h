@@ -8,7 +8,3 @@ namespace fs = std::filesystem;
 using namespace std;
 
 void ViewAllClasses();
-
-string ViewAllTextFile(string *&exclude,int i); // in D:\\project 
-
-string ExcludeClass(string path);
