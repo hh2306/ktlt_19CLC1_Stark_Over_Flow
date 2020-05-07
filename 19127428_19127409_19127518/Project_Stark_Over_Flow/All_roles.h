@@ -13,6 +13,8 @@
 #include "change_class.h"
 #include "ViewAllStudentOfClass.h"
 #include "ViewAllClasses.h"
+#include "EditStudent.h"
+
 using namespace std;
 void all_first_function();
 
