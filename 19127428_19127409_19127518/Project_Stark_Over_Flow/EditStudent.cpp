@@ -256,6 +256,8 @@ void EditStudent(string namefile, string tempname, string user,string newname,in
 		f.close();
 	}
 	fs::rename(tempname, namefile);
+
+//
 }
 
 

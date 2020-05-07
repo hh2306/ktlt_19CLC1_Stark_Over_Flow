@@ -10,3 +10,5 @@ void ReadStudentInClass(string namefile,string user);
 void EditStudent(string namefile,string tempname,string user,string newname,int year,int month,int day);
 
 void Edit_Student();
+
+
