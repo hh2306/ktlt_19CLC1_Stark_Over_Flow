@@ -44,3 +44,31 @@ struct loginresult
 	int type; // 1 = staff , 2 = lecture, 3 = student
 	int location; //location at which array hold the information of that logged in user
 };
+struct course
+{
+	string year;
+	string semester;
+};
+struct schedule
+{
+	int No;
+	string ID;
+	string name;
+	string classes;
+	string account;
+	string lc_name;
+	string degree;
+	string gender;
+	int s_day;
+	int s_month;
+	int s_year;
+	int e_day;
+	int e_month;
+	int e_year;
+	string day;
+	int s_hour;
+	int s_minute;
+	int e_hour;
+	int e_minute;
+	string room;
+};
