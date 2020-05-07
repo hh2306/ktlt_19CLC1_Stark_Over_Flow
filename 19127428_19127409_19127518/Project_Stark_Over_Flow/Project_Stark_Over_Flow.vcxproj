@@ -148,7 +148,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Academic.cpp" />
     <ClCompile Include="AddNewStudent.cpp" />
     <ClCompile Include="All_roles.cpp" />
     <ClCompile Include="changepassword.cpp" />
