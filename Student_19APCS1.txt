@@ -1,23 +1,4 @@
-13
-
-19127409
-23062001
-Phan Huy Hoang
-2001 6 23
-19CLC5
-
-19127002
-abcdef
-Nguyen Minh Kha
-2001 5 15
-19CLC5
-
-19127563
-56789
-Nguyen Le Thao Ngan
-2001 10 26
-19CLC1
-
+10
 
 19127001
 2020014
@@ -78,5 +59,4 @@ Nguyen Van 9
 Nguyen Van 10
 4 10 2020
 19APCS1
-
 

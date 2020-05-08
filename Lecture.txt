@@ -1,0 +1,19 @@
+3
+
+m.dbtien
+abcdef
+Dinh Ba Tien
+Tien si
+Male
+
+dr.nmhuy 
+abcdef
+Nguyen Minh Huy 
+Thac si
+Male
+
+dr.nhminh
+abcdef
+Nguyen Hai Minh 
+Thac si
+Female
