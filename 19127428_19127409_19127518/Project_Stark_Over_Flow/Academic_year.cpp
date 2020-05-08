@@ -7,7 +7,7 @@ void Academic()
 	cout << " Update academic years  ( Enter update )" << endl;
 	cout << " Delete academic years  ( Enter delete )" << endl;
 	cout << " View academic years    ( Enter view   )" << endl;
-	cout << " Exit                   ( Enter exist   )" << endl;
+	cout << " Exist                   ( Enter exist   )" << endl;
 loop:
 	{
 		cout << " Enter Your Command ";
@@ -122,7 +122,6 @@ loop:
 		}
 		else
 		{
-			cout << "Please enter approriate command\n";
 			goto loop;
 		}
 	}
