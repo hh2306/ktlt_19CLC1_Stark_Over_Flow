@@ -53,21 +53,14 @@ void AddNewStudent()
 	// Change number of student of that class after adding a new student
 	ifstream fileR;
 	int N_old_students;
-	fileR.open(path);
-	if (fileR.fail())
-	{
-		cout << "Unable to open file!!!\n";
-		return;
-	}
-	fileR >> N_old_students;		//Take the old value of number of students
-	fileR.close();		
 	//
 	fileR.open(path);
+	fileR >> N_old_students;
 	string temp_path = dir + Class + "-copied" + ext;		//tempory path for the rename function
 	string line;
 	fileW.open(temp_path);
 	fileW << N_old_students + 1 << endl;
-	fileR.seekg(3, ios::cur); // skip the first line which containing the number of students
+	fileR.seekg(2, ios::cur); // skip the first line which containing the number of students
 	while (!fileR.eof())
 	{
 		getline(fileR, line);
@@ -86,20 +79,12 @@ void AddNewStudent()
 	fileW << New.stdnt[0].dob.year << " " << New.stdnt[0].dob.month << " " << New.stdnt[0].dob.day << endl;
 	fileW << Class << endl;
 	fileW.close();
-	// Change number of student in Student.txt file after adding a new student
-	fileR.open(path);
-	if (fileR.fail())
-	{
-		cout << "Unable to open file!!!\n";
-		return;
-	}
-	fileR >> N_old_students;		//Take the old value of number of students
-	fileR.close();
 	//
 	fileW.open("D:\\project\\Student-copied.txt");
 	fileR.open("D:\\project\\Student.txt");
+	fileR >> N_old_students;		//Take the old value of number of students
 	fileW << N_old_students + 1 << endl;
-	fileR.seekg(3, ios::cur);	//Skipping the first line which containning the number of student
+	fileR.seekg(2, ios::cur);	//Skipping the first line which containning the number of student
 	while (!fileR.eof())
 	{
 		getline(fileR, line);
@@ -108,6 +93,7 @@ void AddNewStudent()
 	fileR.close();
 	fileW.close();
 	fs::rename("D:\\project\\Student-copied.txt", "D:\\project\\Student.txt");
+	cout << "Adding new student successfully!!!\n";
 	delete[]New.stdnt;
 }
 

@@ -7,7 +7,7 @@ void Academic()
 	cout << " Update academic years  ( Enter update )" << endl;
 	cout << " Delete academic years  ( Enter delete )" << endl;
 	cout << " View academic years    ( Enter view   )" << endl;
-	cout << " Exit                   ( Enter exit   )" << endl;
+	cout << " Exit                   ( Enter exist   )" << endl;
 loop:
 	{
 		cout << " Enter Your Command ";
@@ -116,11 +116,15 @@ loop:
 			delete[]b;
 			goto loop;
 		}
-		if (command == "exit")
+		if (command == "exist")
 		{
 			return; // goto loop in main
 		}
-
+		else
+		{
+			cout << "Please enter approriate command\n";
+			goto loop;
+		}
 	}
 }
 void change_course_in_txt(course *a, int N_course, string namefile, string tempname)

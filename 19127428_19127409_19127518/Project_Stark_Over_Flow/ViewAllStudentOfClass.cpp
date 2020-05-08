@@ -1,6 +1,7 @@
 #include "ViewAllStudentOfClass.h"
 void ViewAllStudentOfClass(string Class)	 // Example : Class = 19CLC1 
 {
+	int n; //use this to skip the first line
 	ifstream file;
 	string line;
 	string dir = "D:\\project\\Student_" + Class + ".txt";
@@ -9,7 +10,8 @@ void ViewAllStudentOfClass(string Class)	 // Example : Class = 19CLC1
 	{
 		cout << "Unable to open file!!!";
 	}
-	file.seekg(3, ios::beg);
+	file >> n;
+	//file.seekg(2, ios_base::cur); dont use this
 	while (!file.eof())
 	{
 		getline(file, line);
