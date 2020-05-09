@@ -27,7 +27,7 @@ loginresult login(member type)
 			
 		}
 	}
-	if (username[1] == '.' || username[2] == '.')
+	if (username[1] == '.' || username[2] == '.' || username[4] == '.')
 	{
 		for (int i = 0; i < type.N_lecture; ++i)
 		{

@@ -13,7 +13,7 @@ void create_update_delete_view_allLecturers()
 	cout << " Update Lecturer\t( Enter update )" << endl;
 	cout << " Delete Lecturer\t( Enter delete )" << endl;
 	cout << " View all Lecturers\t( Enter view )" << endl;
-	cout << " Exit\t\t\t( Enter exist )" << endl;
+	cout << " Exist\t\t\t( Enter exist )" << endl;
 loop:
 	{
 		cout << endl;
@@ -21,7 +21,81 @@ loop:
 		cin >> command;
 		if (command == "create")
 		{
-			lecture NEW;
+			int n, skip; // skip use to skip number in NO.
+			string Class;
+			cout << "Enter class you want to import lecturers from csv file: ";
+			cin >> Class;
+			fileR.open("D:\\project\\" + Class + "-Schedule.csv");
+			if (fileR.fail())
+			{
+				cout << "Unable to open file " <<endl;
+				return;
+			}
+			fileR.seekg(-1, ios::end);
+			if (fileR.peek() == '\n')
+			{
+				fileR.seekg(-1, ios::cur);
+				int i = fileR.tellg();
+				for (i; i > 0; --i)
+				{
+					if (fileR.peek() == '\n')
+					{
+						fileR.seekg(2, ios::cur);
+						fileR >> n;
+						break;
+					}
+					fileR.seekg(-1, ios::cur);
+				}
+			}
+			mem.lec = new lecture[n];
+			fileR.seekg(0, ios::beg);
+			for (int i = 0; i < 1; ++i)
+			{
+				while (fileR.peek() != '\n') // skip the first line
+				{
+					fileR.seekg(1, ios::cur);
+				}
+				fileR.seekg(2, ios::cur);
+			}
+			for (int i = 0; i < n; ++i)
+			{
+				fileR >> skip;
+				fileR.seekg(1, ios::cur);
+				getline(fileR, line, ','); // Course ID
+				getline(fileR, line, ','); // Course name
+				getline(fileR, line, ','); // Class
+				getline(fileR, mem.lec[i].user, ','); // username of Lecturer
+				getline(fileR, mem.lec[i].name, ','); // Lecturer's name
+				getline(fileR, mem.lec[i].academic_rank, ','); // degree
+				if (mem.lec[i].academic_rank == "Thac Si")
+				{
+					mem.lec[i].user = "m." + mem.lec[i].user;
+				}
+				else if (mem.lec[i].academic_rank == "Tien Si")
+				{
+					mem.lec[i].user = "dr." + mem.lec[i].user;
+				}
+				else
+				{
+					mem.lec[i].user = "prof." + mem.lec[i].user;
+				}
+				getline(fileR, mem.lec[i].sex, ',');
+				mem.lec[i].password = "abcdef";
+				while (fileR.peek() != '\n')
+				{
+					fileR.seekg(1, ios::cur);
+				}
+				fileR.seekg(2, ios::cur);
+			}
+			for (int i = 0; i < n; ++i)
+			{
+				cout << mem.lec[i].user << endl;
+				cout << mem.lec[i].name << endl;
+				cout << mem.lec[i].academic_rank << endl;
+				cout << mem.lec[i].sex << endl;
+			}
+			fileR.close();
+			/*lecture NEW;
 			cout << "Enter new lecturer's user ID: ";
 			cin >> NEW.user;
 			cout << "Enter new lecturer's password: ";
@@ -36,47 +110,59 @@ loop:
 			temp == "thac si" ? NEW.user = "m." + NEW.user : NEW.user = "dr." + NEW.user; // add m. or dr. to user name
 			cout << "Your user name is now: " << NEW.user << " based on your rank" << endl;
 			cout << "Enter new lecturer's sex: ";
-			cin >> NEW.sex;
-			// Copy the old lecturers infomation
-			int n;
-			fileR.open(dir);
-			if (fileR.fail()) return;
-			fileR >> n;
-			fileR.seekg(2, ios::cur);
+			cin >> NEW.sex;*/
+			member old_lecturers;
+			int j;
+			int count=0;
+			Read_lecture(old_lecturers.lec, old_lecturers.N_lecture);
 			fileW.open(dir2);
 			if (fileW.fail())
 			{
-				fileR.close();
-				return;
+				cout << "Unable to open Lecturers file\n";
+				goto loop;
 			}
-			fileW << n + 1 << endl;
-			while (!fileR.eof())
+			for (int i = 0; i < n; ++i)
 			{
-				getline(fileR, line);
-				fileW << line << endl;
+				for (j = 0; j < old_lecturers.N_lecture; ++j)
+				{
+					if (mem.lec[i].user == old_lecturers.lec[j].user)
+					{
+						count++;
+					}
+				}
 			}
-			/*Read_lecture(mem.lec, mem.N_lecture);		//No Need For This Approach // Slow 
-			fileW << mem.N_lecture + 1 << endl;
-			for (int i = 0; i < mem.N_lecture; ++i)
+			fileW << old_lecturers.N_lecture + count << endl;
+			fileW << endl;
+			for (int i = 0; i < old_lecturers.N_lecture; ++i)	// Writing old lecturers to file
 			{
+				fileW << old_lecturers.lec[i].user << endl;
+				fileW << old_lecturers.lec[i].password << endl;
+				fileW << old_lecturers.lec[i].name << endl;
+				fileW << old_lecturers.lec[i].academic_rank << endl;
+				fileW << old_lecturers.lec[i].sex << endl;
+				fileW << endl;
+			}
+			for (int i = 0; i < n; ++i)							// Check if not existed before, create that lecturers to file
+			{
+				for (j = 0; j < old_lecturers.N_lecture; ++j)
+				{
+					if (mem.lec[i].user == old_lecturers.lec[j].user)
+					{
+						i++;
+					}
+				}
 				fileW << mem.lec[i].user << endl;
 				fileW << mem.lec[i].password << endl;
 				fileW << mem.lec[i].name << endl;
 				fileW << mem.lec[i].academic_rank << endl;
 				fileW << mem.lec[i].sex << endl;
 				fileW << endl;
-			}*/
-			// Adding new lecturers to file
-			fileW << NEW.user << endl;
-			fileW << NEW.password << endl;
-			fileW << NEW.name << endl;
-			fileW << NEW.academic_rank << endl;
-			fileW << NEW.sex << endl;
-			fileR.close();
+			}
 			fileW.close();
 			fs::rename(dir2, dir);
-			//delete[] mem.lec;
-			cout << "Create successfully!!!\n";
+			delete[] mem.lec;
+			delete[] old_lecturers.lec;
+			cout << "Imported successfully!!!\n";
 			goto loop;
 		}
 		if (command == "update")
@@ -223,7 +309,7 @@ loop:
 			delete[] mem.lec;
 			goto loop;
 		}
-		if (command == "exit")
+		if (command == "exist")
 		{
 			return;
 		}

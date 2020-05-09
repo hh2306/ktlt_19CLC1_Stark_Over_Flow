@@ -72,3 +72,27 @@ struct schedule
 	int e_minute;
 	string room;
 };
+struct attendance
+{
+	int year;
+	int month;
+	int day;
+	int s_hour;
+	int s_minute;
+	int e_hours;
+	int e_minute;
+	int check_in;
+};
+struct list_attendance
+{
+	string user;
+	string password;
+	string name;
+	DoB dob;
+	string class_stu;
+	float midterm_p;
+	float final_p;
+	float extra_p;
+	float total_p;
+	attendance arr[10];
+};
