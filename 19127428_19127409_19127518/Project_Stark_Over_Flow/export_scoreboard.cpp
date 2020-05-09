@@ -1,5 +1,5 @@
-#include "import_scoreboard.h"
-void import_scoreboard()
+#include "export_scoreboard.h"
+void export_scoreboard()
 {
 	int n;
 	int no;  // order number

@@ -6,6 +6,6 @@
 #include <filesystem>
 namespace fs = std::filesystem;
 using namespace std;
-void import_scoreboard();
+void export_scoreboard();
 
 
