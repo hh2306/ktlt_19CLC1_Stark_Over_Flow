@@ -111,6 +111,7 @@ void import_scoreboard()
 	}
 	fileW.close();
 	fileR.close();
+	delete[] student_score;
 	fs::rename(dir + newname, dir + oldname);
 	cout << "Import Scoreboard successfully!!!\n";
 }
