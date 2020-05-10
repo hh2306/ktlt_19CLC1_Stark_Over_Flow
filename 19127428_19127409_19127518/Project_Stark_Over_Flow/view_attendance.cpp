@@ -38,7 +38,7 @@ void view_attendance()
 			f >> a[i].arr[j].day;
 			f >> a[i].arr[j].s_hour;
 			f >> a[i].arr[j].s_minute;
-			f >> a[i].arr[j].e_hour;
+			f >> a[i].arr[j].e_hours;
 			f >> a[i].arr[j].e_minute;
 			f >> a[i].arr[j].check_in;
 		}
@@ -57,7 +57,7 @@ void view_attendance()
 				cout << "0" << a[i].arr[j].day << " ";
 			else
 				cout << a[i].arr[j].day << " ";
-			cout << a[i].arr[j].s_hour << " " << a[i].arr[j].s_minute << " " << a[i].arr[j].e_hour;
+			cout << a[i].arr[j].s_hour << " " << a[i].arr[j].s_minute << " " << a[i].arr[j].e_hours;
 			cout << " " << a[i].arr[j].e_minute;
 			if (a[i].arr[j].check_in == 0)
 				cout << " attendance " << endl;

@@ -149,6 +149,7 @@ loop:
 					if (mem.lec[i].user == old_lecturers.lec[j].user)
 					{
 						i++;
+						j = -1;  // compare the old lecturers from begining
 					}
 				}
 				fileW << mem.lec[i].user << endl;
