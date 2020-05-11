@@ -32,11 +32,10 @@ loop:
 				return;
 			}
 			fileR.seekg(-1, ios::end);
-			if (fileR.peek() == '\n')
-			{
+
 				fileR.seekg(-1, ios::cur);
-				int i = fileR.tellg();
-				for (i; i > 0; --i)
+				int k = fileR.tellg();
+				for (k; k > 0; --k)
 				{
 					if (fileR.peek() == '\n')
 					{
@@ -46,7 +45,7 @@ loop:
 					}
 					fileR.seekg(-1, ios::cur);
 				}
-			}
+
 			mem.lec = new lecture[n];
 			fileR.seekg(0, ios::beg);
 			for (int i = 0; i < 1; ++i)

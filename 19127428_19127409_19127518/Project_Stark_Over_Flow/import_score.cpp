@@ -23,8 +23,6 @@ void import_scoreboard()
 		return;
 	}
 	fileCSV.seekg(-1, ios::end);
-	if (fileCSV.peek() == '\n')
-	{
 		fileCSV.seekg(-1, ios::cur);
 		int i = fileCSV.tellg();
 		for (i; i > 0; --i)
@@ -37,7 +35,6 @@ void import_scoreboard()
 			}
 			fileCSV.seekg(-1, ios::cur);
 		}
-	}
 	list_attendance* student_score = new list_attendance[n];
 	fileCSV.seekg(0, ios::beg);
 	for (int i = 0; i < 1; ++i)
@@ -48,7 +45,7 @@ void import_scoreboard()
 		}
 		fileCSV.seekg(2, ios::cur);
 	}
-	for (int i = 0; i < n; ++i)
+	for (i = 0; i < n; ++i)
 	{
 		fileCSV >> no;		// a temp skip number oder NO.
 		fileCSV.seekg(1, ios::cur);
@@ -72,7 +69,7 @@ void import_scoreboard()
 
 	fileW.open(dir + newname);
 	fileW << n << endl;
-	int i = 0;
+	i = 0;
 	while (!fileR.eof())
 	{
 		getline(fileR, line);

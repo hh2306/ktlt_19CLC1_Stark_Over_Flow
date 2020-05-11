@@ -7,11 +7,9 @@ void open_csv(int& N_student, student*& arr)
 	string str_temp;
 	// Find a number of student in list 
 	f.seekg(-1, ios::end);
-	if (f.peek() == '\n')
-	{
 		f.seekg(-1, ios::cur);
-		int i = f.tellg();
-		for (i; i > 0; --i)
+		int k = f.tellg();
+		for (k; k > 0; --k)
 		{
 			if (f.peek() == '\n')
 			{
@@ -21,7 +19,6 @@ void open_csv(int& N_student, student*& arr)
 			}
 			f.seekg(-1, ios::cur);
 		}
-	}
 	// Make array of new student 
 	f.seekg(0,ios::beg);
 	getline(f, str_temp);// to skip the first line

@@ -20,11 +20,9 @@ void import_course(schedule *& a, int& N_course)
 	}
 	// Find number of courses in file
 	f.seekg(-1, ios::end);
-	if (f.peek() == '\n')
-	{
 		f.seekg(-1, ios::cur);
-		int i = f.tellg();
-		for (i; i > 0; --i)
+		int k = f.tellg();
+		for (k; k > 0; --k)
 		{
 			if (f.peek() == '\n')
 			{
@@ -34,7 +32,6 @@ void import_course(schedule *& a, int& N_course)
 			}
 			f.seekg(-1, ios::cur);
 		}
-	}
 
 	// Make array of new student 
 	a = new schedule[N_course];
