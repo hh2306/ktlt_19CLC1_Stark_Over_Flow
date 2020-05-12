@@ -1,19 +1,44 @@
 #include "AddNewStudent.h"
 void AddNewStudent()
 {
+	ifstream fileR;
+	ofstream fileW;
 	member New;
 	New.stdnt = new student[1];
-	string Class;
+	string line, Class;
+	string dir = "D:\\project\\Student_";
+	string ext = ".txt";
 	cout << "Enter which class for the new student: "; //for example 19CLC6
 	cin >> Class;
 	cout << "Enter new student's ID: ";
 	cin >> New.stdnt[0].user;
 	cin.ignore();
 	cout << "Enter new student's name: ";
-	getline(cin, New.stdnt[0].name);
-	
+	getline(cin, New.stdnt[0].name);	
 	cout << "Enter new student's date of birth (dd mm yy): ";
 	cin >> New.stdnt[0].dob.day >> New.stdnt[0].dob.month >> New.stdnt[0].dob.year;
+
+	// Check if student already exist
+	cout << "Checking if that student exits already " << endl;
+	fileR.open(dir + Class +ext);
+	if (fileR.fail())
+	{
+		cout << "Unable to open file\n";
+		return;
+	}
+	while (!fileR.eof())
+	{
+		getline(fileR, line);
+		if (line == New.stdnt[0].user)
+		{
+			cout << "The new student you're trying to add is already existed in file" << endl;
+			cout << "Returning to menu" << endl;
+			return;
+		}
+	}
+	cout << endl;
+	fileR.close();
+	////////////////////////////////
 	//create password for new student
 	if (New.stdnt[0].dob.day < 10)
 	{
@@ -33,9 +58,7 @@ void AddNewStudent()
 	}
 	New.stdnt[0].password += IntToString(New.stdnt[0].dob.year);
 	// Adding the info of new student to file
-	ofstream fileW;
-	string dir = "D:\\project\\Student_";
-	string ext = ".txt";
+
 	string path = dir + Class + ext;
 	fileW.open(path, ios::app);
 	if (fileW.fail())
@@ -51,7 +74,7 @@ void AddNewStudent()
 	fileW << Class << endl;
 	fileW.close();
 	// Change number of student of that class after adding a new student
-	ifstream fileR;
+	
 	int N_old_students;
 	//
 	fileR.open(path);
