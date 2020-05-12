@@ -96,3 +96,7 @@ struct list_attendance
 	float total_p;
 	attendance arr[10];
 };
+
+struct Time {
+	int dd, mm, yy, hhs, mms, ss;
+};
