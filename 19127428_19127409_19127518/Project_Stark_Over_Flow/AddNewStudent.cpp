@@ -80,7 +80,6 @@ void AddNewStudent()
 	fileR.open(path);
 	fileR >> N_old_students;
 	string temp_path = dir + Class + "-copied" + ext;		//tempory path for the rename function
-	string line;
 	fileW.open(temp_path);
 	fileW << N_old_students + 1 << endl;
 	fileR.seekg(2, ios::cur); // skip the first line which containing the number of students

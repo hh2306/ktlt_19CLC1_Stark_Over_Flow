@@ -5,13 +5,13 @@ void Check_In(string ID)
 	int temp, start_hours, end_hours, start_minutes, end_minutes;
 	ifstream fileR;
 	ofstream fileW;
-	string line,current_line_to_checkin, semester="HK2", Class="19APCS1", course="CS162";
-	//cout << "Please enter semester ( Ex: HK2 ): ";
-	//cin >> semester;
-	//cout << "Please enter the class: ";
-	//cin >> Class;
-	//cout << "Please enter your course that you want to check in: ";
-	//cin >> course;
+	string line,current_line_to_checkin, semester, Class, course;
+	cout << "Please enter semester ( Ex: HK2 ): ";
+	cin >> semester;
+	cout << "Please enter the class: ";
+	cin >> Class;
+	cout << "Please enter your course that you want to check in: ";
+	cin >> course;
 	string oldname = "-Student.txt";
 	string newname = "-Student-copied.txt";
 	string dir = "D:\\project\\2019-2020-" + semester + '-' + Class + '-' + course;
@@ -41,15 +41,11 @@ void Check_In(string ID)
 		return;
 	}
 	fileW << n << endl;
+	int i = 0;
 loop1:
 	{
 		while (!fileR.eof())
 		{
-			while (fileR.peek() != '\n') //move the pointer backward
-			{
-				fileR.seekg(-1, ios::cur);
-			}
-			fileR.seekg(2, ios::cur);
 			getline(fileR, line);
 			if (line == ID)
 			{
@@ -81,8 +77,19 @@ loop1:
 						fileR.seekg(2, ios::cur);
 						getline(fileR, line);
 						fileW << line << endl;
+						++i;
+						if (i == 9) goto skip; // check if after 10 dates not meet requirement
 					}
-					fileR >> temp;				//year			
+					fileR >> temp;				//year		
+					if (temp > current.yy*10)
+					{
+						while (fileR.peek() != '\n') //move the pointer backward
+						{
+							fileR.seekg(-1, ios::cur);
+						}
+						fileR.seekg(2, ios::cur);
+						goto skip;
+					}
 					if (current.yy != temp)
 					{
 						count = -1;
@@ -122,6 +129,11 @@ loop1:
 					}
 					else {
 						count = -1;
+						while (fileR.peek() != '\n') //move the pointer backward
+						{
+							fileR.seekg(-1, ios::cur);
+						}
+						fileR.seekg(2, ios::cur);
 						goto loop1;
 					}
 					if ((current.hhs == end_hours && current.mms <= end_minutes) || current.hhs < end_hours)
@@ -130,6 +142,11 @@ loop1:
 					}
 					else {
 						count = -1;
+						while (fileR.peek() != '\n') //move the pointer backward
+						{
+							fileR.seekg(-1, ios::cur);
+						}
+						fileR.seekg(2, ios::cur);
 						goto loop1;
 					}
 				}
@@ -149,11 +166,14 @@ loop1:
 					//fileW << current.yy << " " << current.mm << " " << current.dd << " ";
 					fileW << start_hours << " " << start_minutes << " " << end_hours << " " << end_minutes << " " << 0 << endl;
 				}
-				getline(fileR, line);
-				while (!fileR.eof())
+			skip:
 				{
 					getline(fileR, line);
-					fileW << line << endl;
+					while (!fileR.eof())
+					{
+						getline(fileR, line);
+						fileW << line << endl;
+					}
 				}
 			}
 			else

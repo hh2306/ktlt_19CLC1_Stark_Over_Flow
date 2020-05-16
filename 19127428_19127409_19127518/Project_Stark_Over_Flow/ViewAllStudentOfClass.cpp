@@ -15,9 +15,22 @@ void ViewAllStudentOfClass(string Class)	 // Example : Class = 19CLC1
 	while (!file.eof())
 	{
 		getline(file, line);
-		if (line[0] > '9') // print only the name 
+		if (line != "\n")
 		{
-			cout << line << endl;
+			if (line[0] >= '0' && line[0] <= '9') // ID 
+			{
+				getline(file, line); // password
+				getline(file, line); // name
+				cout << line << endl;
+				for (int i = 0; i < 2; ++i) // i = each line, skip 2 lines according to txt file format
+				{
+					while (file.peek() != '\n')
+					{
+						file.seekg(1, ios::cur);
+					}
+					file.seekg(2, ios::cur);
+				}
+			}			
 		}
 	}
 	file.close();
