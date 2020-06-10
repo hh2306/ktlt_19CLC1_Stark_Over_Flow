@@ -1,0 +1,28 @@
+2
+
+CS162
+Introduction to Programming
+19CLC2
+dbtien
+Dinh Ba Tien
+Thac Si
+Male
+2020 04 06
+2020 06 01
+7 30
+11 30
+I42
+
+CM101
+Communications
+19CLC2
+dnvu
+Duong Nguyen Vu
+Giao Su
+Male
+2020 04 06
+2020 06 01
+13 30
+17 30
+I2
+
